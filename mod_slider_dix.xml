@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Slider DIX</name>
+    <author>Boyko Dmitry</author>
+    <creationDate>22.04.2018</creationDate>
+    <authorEmail>mail@itdix.net</authorEmail>
+    <authorUrl>http://itdix.net</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_SLIDER_DIX_DESCRIPTION</description>
+    <files>
+        <filename module="mod_slider_dix">mod_slider_dix.php</filename>
+		<filename>index.html</filename>
+        <filename>mod_slider_dix.xml</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>slider_dix</folder>
+		
+    </files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.mod_slider_dix.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_slider_dix.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_slider_dix.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_slider_dix.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="">
+			<fieldset name="basic">
+                <field name="FolderImages" label="MOD_SLIDER_DIX_PATH" type="text" default="slider"  description="MOD_SLIDER_DIX_PATH_HELP" />
+                <field name="Style" type="list" default="move" label="MOD_SLIDER_DIX_STYLE" description="MOD_SLIDER_DIX_STYLE_HELP">
+                    <option value="move">MOD_SLIDER_DIX_MOVE</option>
+                    <option value="extinction">MOD_SLIDER_DIX_EXTINCTION</option>
+                    <option value="transition">MOD_SLIDER_DIX_TRANSITION</option>
+                </field>
+				<field name="SpeedInterval" label="MOD_SLIDER_DIX_SPEED" type="text" default="2000"  description="MOD_SLIDER_DIX_SPEED_HELP" />
+                <field name="AutoMove" type="radio" default="1" label="MOD_SLIDER_DIX_AUTO" description="MOD_SLIDER_DIX_AUTO_НELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="AutoInterval" label="MOD_SLIDER_DIX_AUTO_INTERVAL" type="text" default="3000"  description="MOD_SLIDER_DIX_AUTO_INTERVAL_HELP" />
+                
+				<field name="AutoSize" type="radio" default="0" label="MOD_SLIDER_DIX_SIZE" description="MOD_SLIDER_DIX_SIZE_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="Width" label="MOD_SLIDER_DIX_WIDTH" type="text" default="1000"  description="MOD_SLIDER_DIX_WIDTH_HELP" />
+				<field name="Height" label="MOD_SLIDER_DIX_HIGHT" type="text" default="500"  description="MOD_SLIDER_DIX_HIGHT_HELP" />
+				<field name="ButtonView" type="radio" default="1" label="MOD_SLIDER_DIX_BUTTON" description="MOD_SLIDER_DIX_BUTTON_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="Sort" type="list" default="asc" label="MOD_SLIDER_DIX_SORT" description="MOD_SLIDER_DIX_SORT_HELP">
+                    <option value="asc">MOD_SLIDER_DIX_ASC</option>
+					<option value="dsc">MOD_SLIDER_DIX_DSC</option>
+                </field>
+			</fieldset>
+
+ 
+		</fields>
+		
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Slider DIX">http://itdix.net/update/mod_slider_dix/mod_slider_dix.xml</server>
+	</updateservers>
+	
+</extension>
